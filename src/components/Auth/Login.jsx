@@ -29,7 +29,7 @@ const Login = () => {
         setError("");
         
         try {
-            const response = await axios.post("http://localhost:8080/login", formData);
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/login`, formData);
             const { token, name } = response.data;
             
             // Save token and user info
