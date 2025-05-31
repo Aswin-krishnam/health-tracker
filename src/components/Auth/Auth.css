@@ -1,0 +1,323 @@
+.eduai-auth-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    position: relative;
+    overflow: hidden;
+}
+
+.eduai-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.eduai-auth-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    z-index: 2;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.eduai-auth-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.eduai-logo-icon {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+
+.eduai-auth-title {
+    color: white;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.eduai-auth-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.eduai-progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.eduai-progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.eduai-step-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.eduai-progress-step.active .eduai-step-number,
+.eduai-progress-step.completed .eduai-step-number {
+    background: #4CAF50;
+}
+
+.eduai-progress-line {
+    flex: 1;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0 1rem;
+    position: relative;
+    top: -15px;
+}
+
+.eduai-progress-inner {
+    height: 100%;
+    background: #4CAF50;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.eduai-progress-inner.completed {
+    width: 100%;
+}
+
+.eduai-form-group {
+    margin-bottom: 1.5rem;
+}
+
+.eduai-form-group label {
+    display: block;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.eduai-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.eduai-input-icon {
+    position: absolute;
+    left: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.eduai-input-wrapper input {
+    width: 100%;
+    padding: 0.8rem 1rem 0.8rem 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 1rem;
+}
+
+.eduai-input-wrapper input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.eduai-password-toggle {
+    position: absolute;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    padding: 0;
+}
+
+.eduai-auth-button {
+    width: 100%;
+    padding: 1rem;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.eduai-auth-button:hover {
+    background: #45a049;
+}
+
+.eduai-auth-button.loading {
+    position: relative;
+    color: transparent;
+}
+
+.eduai-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.eduai-field-error {
+    color: #ff4d4d;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.eduai-auth-error {
+    background: rgba(255, 77, 77, 0.1);
+    color: #ff4d4d;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.eduai-error-icon {
+    margin-right: 0.5rem;
+}
+
+.eduai-password-strength {
+    margin-top: 1rem;
+}
+
+.eduai-strength-text {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.eduai-strength-meter {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.eduai-strength-indicator {
+    height: 100%;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.eduai-password-tips {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.eduai-form-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.eduai-back-button {
+    padding: 1rem;
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 1;
+}
+
+.eduai-back-button:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.eduai-auth-redirect {
+    text-align: center;
+    color: white;
+    margin-top: 1.5rem;
+}
+
+.eduai-redirect-link {
+    color: #4CAF50;
+    text-decoration: none;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.eduai-terms {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.875rem;
+    margin-top: 1.5rem;
+}
+
+.eduai-terms-link {
+    color: #4CAF50;
+    text-decoration: none;
+    margin: 0 0.25rem;
+}
+
+@keyframes errorShake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.error-shake {
+    animation: errorShake 0.5s ease;
+}
+
+.success-animation {
+    animation: successPulse 0.5s ease;
+}
+
+@keyframes successPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .eduai-auth-box {
+        padding: 1.5rem;
+    }
+
+    .eduai-auth-title {
+        font-size: 1.5rem;
+    }
+
+    .eduai-form-buttons {
+        flex-direction: column;
+    }
+}
