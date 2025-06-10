@@ -11,6 +11,13 @@ const SignUp = () => {
         password: "",
         confirmPassword: ""
     });
+
+    useEffect(() => {
+        // Redirect to dashboard if already logged in
+        if (localStorage.getItem('token')) {
+            navigate('/dashboard');
+        }
+    }, [navigate]);
     const [error, setError] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [showPassword, setShowPassword] = useState(false);

@@ -1,0 +1,248 @@
+.vitals-container {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.vitals-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.vitals-header h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.vitals-header p {
+    color: #666;
+}
+
+.vitals-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.blood-pressure-inputs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.blood-pressure-inputs input {
+    width: calc(50% - 0.5rem);
+}
+
+.blood-pressure-inputs span {
+    color: #666;
+    font-weight: 500;
+}
+
+.medications-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.medications-section h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.medication-form {
+    margin-bottom: 2rem;
+}
+
+.medication-form .form-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.add-medication-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.add-medication-button:hover {
+    background-color: #45a049;
+}
+
+.medications-list {
+    margin-top: 2rem;
+}
+
+.medications-list h4 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.medication-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.medication-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.medication-name {
+    font-weight: 500;
+    color: #333;
+}
+
+.medication-details {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.medication-status {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.medication-status.taken {
+    color: #4CAF50;
+}
+
+.remove-medication {
+    background-color: transparent;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.remove-medication:hover {
+    color: #bd2130;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.submit-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.alert {
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.alert.error {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+}
+
+.alert.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
+.vitals-summary {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.vitals-summary h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.summary-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.stat label {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.stat span {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+}
